@@ -11,7 +11,7 @@ STATICFILES_DIR = (
 
 ALLOWED_HOSTS = ['django-anti-ux.herokuapp.com']
 
-DEBUG = False
+DEBUG = True
 
 SECRET_KEY = 'j&l=ee1)m8n@x6o&@ynr_lc5&s-%&!d*j@70f#z2!uyrw+4y=asdf'
 
