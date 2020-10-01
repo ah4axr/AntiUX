@@ -9,7 +9,7 @@ STATICFILES_DIR = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-ALLOWED_HOSTS = ['django-anti-ux.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'django-anti-ux.herokuapp.com']
 
 DEBUG = True
 
