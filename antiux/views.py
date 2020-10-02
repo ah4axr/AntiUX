@@ -44,6 +44,15 @@ class GuitarUsernameView(generic.CreateView):
         self.object = form.save(commit=False)
         return super(GuitarUsernameView, self).form_valid(form)
 
+class GuitarPasswordView(generic.CreateView):
+    template_name = 'antiux/guitarPassword.html'
+    success_url = reverse_lazy('antiux:guitarPassword')
+    form_class = UserForm
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        return super(GuitarPasswordView, self).form_valid(form)
+
 class GuitarView(generic.CreateView):
     template_name = 'antiux/guitar.html'
     success_url = reverse_lazy('antiux:guitar')
@@ -61,6 +70,15 @@ class DrumsUsernameView(generic.CreateView):
     def form_valid(self, form):
         self.object = form.save(commit=False)
         return super(DrumsUsernameView, self).form_valid(form)
+
+class DrumsPasswordView(generic.CreateView):
+    template_name = 'antiux/drumsPassword.html'
+    success_url = reverse_lazy('antiux:drumsPassword')
+    form_class = UserForm
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        return super(DrumsPasswordView, self).form_valid(form)
 
 class DrumsView(generic.CreateView):
     template_name = 'antiux/drums.html'
@@ -80,6 +98,15 @@ class PianoUsernameView(generic.CreateView):
         self.object = form.save(commit=False)
         return super(PianoUsernameView, self).form_valid(form)
 
+class PianoPasswordView(generic.CreateView):
+    template_name = 'antiux/pianoPassword.html'
+    success_url = reverse_lazy('antiux:pianoPassword')
+    form_class = UserForm
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        return super(PianoPasswordView, self).form_valid(form)
+
 class PianoView(generic.CreateView):
     template_name = 'antiux/piano.html'
     success_url = reverse_lazy('antiux:piano')
@@ -97,6 +124,15 @@ class BassUsernameView(generic.CreateView):
     def form_valid(self, form):
         self.object = form.save(commit=False)
         return super(BassUsernameView, self).form_valid(form)
+
+class BassPasswordView(generic.CreateView):
+    template_name = 'antiux/bassPassword.html'
+    success_url = reverse_lazy('antiux:bassPassword')
+    form_class = UserForm
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        return super(BassPasswordView, self).form_valid(form)
 
 class BassView(generic.CreateView):
     template_name = 'antiux/bass.html'
