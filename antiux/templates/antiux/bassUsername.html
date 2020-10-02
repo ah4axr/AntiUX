@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -25,7 +25,8 @@
         {
             document.getElementById("failDisplay").innerHTML = "";
             document.getElementById("passDisplay").innerHTML = temp + " is an ok username.";
-            document.getElementById("cool").innerHTML = '<button type="button" class="btn btn"><a href="{% url 'antiux:bassPassword' %}">Next</a></button>';
+            document.getElementById("notCool").innerHTML = '';
+            document.getElementById("cool").innerHTML = '<button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:bassPassword' %}" style="color:white">Next</a></button>';
         }
         else
         {
@@ -38,7 +39,7 @@
 <body>
     <div id='content'>
         <h1>Anti UX</h1>
-        <h3>Guitar Username</h3>
+        <h3>Bass Username</h3>
         <div id='usernameContainer'>
             <input oninput="process()" class="form-control" type="text" id="username">
 
@@ -46,7 +47,10 @@
             <p id="failDisplay"></p>
 
             <div id='nextBackButtons'>
-                <button type="button" class="btn btn"><a href="{% url 'antiux:index' %}">Back</a></button>
+                <button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:index' %}" style="color:white">Back</a></button>
+                <div id="notCool">
+                    <button type="button" style="background-color: lightgreen; color:white">Next</a></button>
+                </div>
                 <div id="cool"></div>
             </div>
         </div>

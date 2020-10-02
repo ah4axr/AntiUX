@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -25,12 +25,13 @@
         {
             document.getElementById("failDisplay").innerHTML = "";
             document.getElementById("passDisplay").innerHTML = temp + " is an ok username.";
-            document.getElementById("cool").innerHTML = '<button type="button" class="btn btn"><a href="{% url 'antiux:drumsPassword' %}">Next</a></button>';
+            document.getElementById("notCool").innerHTML = '';
+            document.getElementById("cool").innerHTML = '<button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:drumsPassword' %}" style="color:white">Next</a></button>';
         }
         else
         {
             document.getElementById("passDisplay").innerHTML = "";
-            document.getElementById("failDisplay").innerHTML = temp + " is not an ok username.";
+            document.getElementById("failDisplay").innerHTML = temp + " is not an ok username.";           
         }
     }
 </script>
@@ -46,7 +47,10 @@
             <p id="failDisplay"></p>
 
             <div id='nextBackButtons'>
-                <button type="button" class="btn btn"><a href="{% url 'antiux:index' %}">Back</a></button>
+                <button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:index' %}" style="color:white">Back</a></button>
+                <div id="notCool">
+                    <button type="button" style="background-color: lightgreen; color:white">Next</a></button>
+                </div>
                 <div id="cool"></div>
             </div>
         </div>

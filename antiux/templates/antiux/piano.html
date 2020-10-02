@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -23,9 +23,17 @@
 <body>
     <div id='content'>
         <h1>Anti UX</h1>
-        <div id='passwordContainer'>
-            <h1>Piano</h1>
+        <h2>Piano:</h2>
+        <div id='instrumentPage'>
+            <img src="../../static/antiux/piano.jpg" width="300" height="300" style="margin: 20px;" />
+            <p id="instrumentParagraph">THE PIANO IS AN INSTRUMENT WITH KEYS THAT, WHEN PRESSED, TRIGGER
+            A HAMMER TO HIT A STRING ON THE INSIDE OF THE BODY OF THE PIANO. THE STRINGS THE VIBRATE THE 
+            WOODEN BODY OF THE PIANO AND PRODUCE SOUND WAVES THAT WE CAN HEAR. THE PIANO HAS A MASSIVE RANGE,
+            FROM BASS TO MID TO TREBLE. iT WAS INVENTED IN THE 18 CENTURY. SOME MODERN COMPETING PIANO COMPANIES
+            ARE YAMAHA, STEINWAY, AND BALDWIN.
+            </p>
         </div>
+        <button type="button" style="background-color: lightgreen; margin: 10px;"><a href="{% url 'antiux:index' %}" style="color:white">Home</a></button>
     </div>
 </body>
 </html>

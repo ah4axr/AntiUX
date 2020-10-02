@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -23,9 +23,17 @@
 <body>
     <div id='content'>
         <h1>Anti UX</h1>
-        <div id='passwordContainer'>
-            <h1>Guitar</h1>
+        <h2>Guitar:</h2>
+        <div id='instrumentPage'>
+            <img src="../../static/antiux/guitar.jpg" width="300" height="300" style="margin: 20px;" />
+            <p id="instrumentParagraph">THE GUITAR IS A FRETTED STRINGED INSTRUMENT THAT WAS INVENTED IN THE FIFTEENTH CENTURY.
+            SOUND IS PRODUCED BY PLUCKING AS STRING. THIS PRODUCES A SOUND WAVE THAT VIBRATES THE WOODEN BODY OF THE GUITAR.
+            THE WOODEN BODY HELPS VIBRATE THE AIR AROUND THE GUITAR TO PRODUCE SOUND WAVES THAT WE CAN HEAR. IN THE 1920S, THE
+            PICKUP WAS INVENTED. THIS TURNED THE STRING VIBRATIONS INTO ELECTROMAGNETIC WAVES THAT COULD TRAVEL THROUGH CABLES
+            AND PRODUCE SOUND THROUGH AMPLIFIERS. THIS INVENTION LEAD TO THE MODERN ELECTRIC GUITAR. NOW, THERE ARE MANY COMPETING 
+            GUITAR COMPANIES, LIKE GIBSON, RICKENBACKER, FENDER, AND PRS.</p>
         </div>
+        <button type="button" style="background-color: lightgreen; margin: 10px;"><a href="{% url 'antiux:index' %}" style="color:white">Home</a></button>
     </div>
 </body>
 </html>

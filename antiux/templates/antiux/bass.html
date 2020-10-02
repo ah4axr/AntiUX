@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -23,9 +23,18 @@
 <body>
     <div id='content'>
         <h1>Anti UX</h1>
-        <div id='passwordContainer'>
-            <h1>Bass</h1>
+        <h2>Bass:</h2>
+        <div id='instrumentPage'>
+            <img src="../../static/antiux/bass.jpg" width="300" height="300" style="margin: 20px;" />
+            <p id="instrumentParagraph">THE DOUBLE BASS WAS INVENTED IN THE FIFTEENTH CENTURY.IT IS A 
+            LARGE STRINGED INSTRUMENT THAT PRODUCES SOUND BY BEING BOWED BY THE PERFORMER. THE STRINGS
+            VIBRATE THE WOODEN BODY OF THE INSTRUMENT AND THE WOODEN BODY HELPS VIBRATE THE AIR AROUND
+            THE INSTRUMENT TO PRODUCE SOUND WAVES THAT WE CAN HEAR OR FEEL. IT WAS CREATED TO ADD LOW END 
+            SOUNDS THAT THE ORCHESTRA COULD NOT PRODUCE. THE ELECTRIC BASS GUITAR WAS INVENTED IN THE 1930S,
+            FOLLOWING THE INVENTION OF THE ELECTRIC GUITAR PICKUP. MODERN COMPETEING BASS GUITAR COMPANIES
+            INCLUDE FENDER, GIBSON, AND WARWICK.</p>
         </div>
+        <button type="button" style="background-color: lightgreen; margin: 10px;"><a href="{% url 'antiux:index' %}" style="color:white">Home</a></button>
     </div>
 </body>
 </html>
