@@ -13,59 +13,64 @@
 <link rel="stylesheet" type="text/css" href="{% static 'antiux/style.css' %}">
 
 <script>
-    function press(){
-        document.getElementById('buttons').innerHTML = '<button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:password' %}" style="color:white">Next</a></button>';
-    }
-
     function flagG(){
-        document.getElementById('buttons').innerHTML = '<button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:password' %}" style="color:white">Next</a></button>';
+        document.getElementById('buttons').innerHTML = '<button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:guitarUsername' %}" style="color:white">Next</a></button>';
     }
     function flagD(){
-        document.getElementById('buttons').innerHTML = '<button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:password' %}" style="color:white">Next</a></button>';
+        document.getElementById('buttons').innerHTML = '<button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:drumsUsername' %}" style="color:white">Next</a></button>';
     }
     function flagP(){
-        document.getElementById('buttons').innerHTML = '<button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:password' %}" style="color:white">Next</a></button>';
+        document.getElementById('buttons').innerHTML = '<button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:pianoUsername' %}" style="color:white">Next</a></button>';
     }
     function flagB(){
-        document.getElementById('buttons').innerHTML = '<button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:password' %}" style="color:white">Next</a></button>';
+        document.getElementById('buttons').innerHTML = '<button type="button" style="background-color: lightgreen"><a href="{% url 'antiux:bassUsername' %}" style="color:white">Next</a></button>';
     }
 </script>
 
 <body>
     <div id='content'>
         <h1>Anti UX</h1>
-        <h4>Instructions:</h4>
-        <div id='instructions'>
-            <p id='instructionsText'>
-                Choose an instruments to learn more about it.
-            </p>
-        </div>
         <div id='container'>
             <div id="empty"></div>
             <div id='list'>
-                <div id='object'>
-                    <img src="../../static/antiux/guitar.jpg" width="100" height="100" onclick="flagG()" />
-                    <p>Guitar</p>
+                <div id='object' onclick="flagG()" style="        
+                    background-color: linen;
+                    border-top-right-radius: 25px;
+                    border-top-left-radius: 25px;
+                ">
+                    <img src="../../static/antiux/guitar.jpg" width="100" height="100" style="padding: 5px;"/>
+                    <p id ="instrumentText"  >Guitar</p>
                 </div>
-                <div id='object'>
-                    <img src="../../static/antiux/drums.webp" width="100" height="100" onclick="flagD()" />
-                    <p>Drums</p>
+                <div id='object' onclick="flagD()" style="background-color: lightyellow;">
+                    <img src="../../static/antiux/drums.webp" width="100" height="100" style="padding: 5px;"/>
+                    <p id ="instrumentText" >Drums</p>
                 </div>
-                <div id='object'>
-                    <img src="../../static/antiux/piano.jpg" width="100" height="100" onclick="flagP()" />
-                    <p>Piano</p>
+                <div id='object' onclick="flagP()" style="background-color: beige;">
+                    <img src="../../static/antiux/piano.jpg" width="100" height="100" style="padding: 5px;"/>
+                    <p id ="instrumentText" >Piano</p>
                 </div>
-                <div id='object'>
-                    <img src="../../static/antiux/bass.jpg" width="100" height="100" onclick="flagB()" />
-                    <p>Bass</p>
+                <div id='object' onclick="flagB()" style="        
+                    background-color: lightgoldenrodyellow;
+                    border-bottom-right-radius: 25px;
+                    border-bottom-left-radius: 25px;
+                ">
+                    <img src="../../static/antiux/bass.jpg" width="100" height="100"  style="padding: 5px;"/>
+                    <p id ="instrumentText" >Bass</p>
                 </div>
             </div>
 
             <div id="adDirectionsBox">
-                <p id="adDirections">
+                <div id="adDirections">
                     <span class="blinking">!!!THIS IS IMPORTANT INFORMATION!!!</span><br />
 
-                </p>
+                    <h5>Instructions:</h5>
+                    <div id='instructions'>
+                        <p id='instructionsText'>
+                            Choose an instruments to learn more about it. On the next page, you will be asked to 
+                            to 
+                        </p>
+                    </div>
+                </div>
             </div>
 
         </div>

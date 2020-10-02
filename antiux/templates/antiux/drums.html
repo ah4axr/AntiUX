@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>
-        AnitUX - Password
+        AnitUX - Drums
     </title>
 </head>
 {% load static %}
@@ -16,7 +16,7 @@
 <script>
     function process() {
     var x = document.getElementById("password").value;
-    document.getElementById("passDisplay").innerHTML = x;
+    document.getElementById("demo").innerHTML = x;
     }
 </script>
 
@@ -24,16 +24,7 @@
     <div id='content'>
         <h1>Anti UX</h1>
         <div id='passwordContainer'>
-            <input class="form-control" type="text" id="password">
-
-            <button onclick="process()" class="btn btn-dark">Check</button>
-
-            <p id="passDisplay"></p>
-
-            <div id='buttons'>
-                <button type="button" class="btn btn"><a href="{% url 'antiux:results' %}">Next</a></button>
-                <button type="button" class="btn btn"><a href="{% url 'antiux:index' %}">Back</a></button>
-            </div>
+            <h1>Drums</h1>
         </div>
     </div>
 </body>

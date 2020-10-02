@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>
+        AnitUX - Piano
+    </title>
+</head>
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'antiux/style.css' %}">
+
+<script>
+    function process() {
+    var temp = document.getElementById("username").value;
+
+    if ((temp.includes('0') || temp.includes("1") || temp.includes('2') || temp.includes('3') || temp.includes('4') ||
+    temp.includes('5') || temp.includes('6') || temp.includes('7') || temp.includes('8') || temp.includes('9'))
+    &&
+    (temp.includes('A') || temp.includes('B') || temp.includes('C') || temp.includes('D') || temp.includes('E') || temp.includes('F') ||
+    temp.includes('G') || temp.includes('H') || temp.includes('I') || temp.includes('J') || temp.includes('K') || temp.includes('L') ||
+    temp.includes('M') || temp.includes('N') || temp.includes('O') || temp.includes('P') || temp.includes('Q') || temp.includes('R') ||
+    temp.includes('S') || temp.includes('T') || temp.includes('U') || temp.includes('V') || temp.includes('W') || temp.includes('X') ||
+    temp.includes('Y') || temp.includes('Z')))
+    {
+    document.getElementById("failDisplay").innerHTML = "";
+    document.getElementById("passDisplay").innerHTML = temp + " is an ok password.";
+    document.getElementById("cool").innerHTML = '<button type="button" class="btn btn"><a href="{% url 'antiux:piano' %}">Next</a></button>';
+    }
+    else
+    {
+    document.getElementById("passDisplay").innerHTML = "";
+    document.getElementById("failDisplay").innerHTML = temp + " is not an ok password.";
+    }
+    }
+</script>
+
+<body>
+    <div id='content'>
+        <h1>Anti UX</h1>
+        <h3>Piano Username</h3>
+        <div id='usernameContainer'>
+            <input oninput="process()" class="form-control" type="text" id="username">
+
+            <p id="passDisplay"></p>
+            <p id="failDisplay"></p>
+
+            <div id='nextBackButtons'>
+                <button type="button" class="btn btn"><a href="{% url 'antiux:index' %}">Back</a></button>
+                <div id="cool"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
