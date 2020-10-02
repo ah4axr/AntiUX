@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -23,9 +23,18 @@
 <body>
     <div id='content'>
         <h1>Anti UX</h1>
-        <div id='passwordContainer'>
-            <h1>Drums</h1>
+        <h2>Drums:</h2>
+        <div id='instrumentPage'>
+            <img src="../../static/antiux/drums.webp" width="300" height="300" style="margin: 20px;" />
+            <p id="instrumentParagraph">A DRUM IS A WOODEN CYLINDER WITH PLASTIC SKINS ON EITHER END.
+            WHEN THESE SKINS ARE HIT WITH A HAND OR A DRUM STICK, SOUND WAVES RESONATE INSIDE THE WOODEN
+            CYLINDER. THESE SOUND WAVES VIBRATE THE WOODEN BODY AND CREATE SOUND WAVE THAT WE CAN HEAR. 
+            THERE ARE MANY DIFFERENT TYPES OF DRUMS, RANGING FROM HAND DRUMS, LIKE THE CONGAS, TO FULL DRUMSETS
+            THAT INCLUDE CYMBALS, TOMS, SNARES, AND KICK DRUMS. SOME MODERN COMPETING DRUM COMPANIES ARE
+            PEARL, DW, YAMAHA, AND GRETSCH.
+            </p>
         </div>
+        <button type="button" style="background-color: lightgreen; margin: 10px;"><a href="{% url 'antiux:index' %}" style="color:white">Home</a></button>
     </div>
 </body>
 </html>
