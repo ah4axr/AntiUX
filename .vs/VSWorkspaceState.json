@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\antiux",
+    "\\antiux\\static",
+    "\\antiux\\static\\antiux",
+    "\\antiux\\templates",
+    "\\antiux\\templates\\antiux",
+    "\\mysite"
   ],
+  "SelectedNode": "\\antiux\\templates\\antiux\\guitarPassword.html",
   "PreviewInSolutionExplorer": false
 }
